@@ -1,0 +1,5 @@
+_scratch/
+*.tmp.docx
+~$*.docx
+db/
+incremental_db/
