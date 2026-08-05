@@ -1,0 +1,17 @@
+Analysis & Synthesis Status : Successful - Tue Aug 04 11:12:11 2026
+Quartus Prime Version : 16.1.0 Build 196 10/24/2016 SJ Standard Edition
+Revision Name : hps
+Top-level Entity Name : hps
+Family : Cyclone V
+Logic utilization (in ALMs) : N/A
+Total registers : 7685
+Total pins : 338
+Total virtual pins : 0
+Total block memory bits : 62,302
+Total DSP Blocks : 0
+Total HSSI RX PCSs : 0
+Total HSSI PMA RX Deserializers : 0
+Total HSSI TX PCSs : 0
+Total HSSI PMA TX Serializers : 0
+Total PLLs : 1
+Total DLLs : 1

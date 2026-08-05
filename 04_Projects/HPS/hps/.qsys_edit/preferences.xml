@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<preferences>
+ <debug showDebugMenu="0" />
+ <systemtable filter="All Interfaces">
+  <columns>
+   <connections preferredWidth="319" />
+   <irq preferredWidth="63" />
+  </columns>
+ </systemtable>
+ <library
+   expandedCategories="Library/Processors and Peripherals/Inter-Process Communication,Library/Interface Protocols/Ethernet/10G to 1G Multi-rate Ethernet,Library/Processors and Peripherals,Library/Interface Protocols,Library,Library/Interface Protocols/Ethernet,Project" />
+ <window width="1689" height="932" x="0" y="11" />
+ <hdlexample language="VERILOG" />
+</preferences>
