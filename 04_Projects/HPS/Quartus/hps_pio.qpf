@@ -1,0 +1,6 @@
+DATE = "15:10:26 August 06, 2026"
+QUARTUS_VERSION = "16.0.2"
+
+# Revisions
+
+PROJECT_REVISION = "hps_pio"
