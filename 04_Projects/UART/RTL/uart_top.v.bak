@@ -1,0 +1,66 @@
+// ============================================================
+// Module    : uart_top.v
+// Project   : DE10-Standard_FPGA_EKB / 04_Projects/UART
+// Volume ref: Volume IV - Peripherals and IO, Chapter 1
+// Author    : Nguyen Gia Huy
+// Description : Top module UART Echo (Loopback received data to TX & display on LEDR)
+// Dependencies: uart_rx.v, uart_tx.v
+// ============================================================
+
+module uart_top #(
+    parameter CLK_FREQ  = 50_000_000,
+    parameter BAUD_RATE = 115_200
+) (
+    input  wire       CLOCK_50,  // PIN_AF14 (Clock 50MHz)
+    input  wire [0:0] KEY,       // PIN_AJ4  (KEY[0] - Reset active low)
+    input  wire       UART_RX,   // PIN_Y17  (Cổng GPIO_0[1])
+    output wire       UART_TX,   // PIN_AC18 (Cổng GPIO_0[0])
+    output wire [7:0] LEDR       // PIN_V16..PIN_W16 (LEDR[7:0])
+);
+
+    wire       clk   = CLOCK_50;
+    wire       rst_n = KEY[0];
+
+    wire [7:0] rx_data_w;
+    wire       rx_done_w;
+    wire       tx_busy_w;
+
+    reg  [7:0] led_reg;
+
+    // Khối nhận UART RX
+    uart_rx #(
+        .CLK_FREQ(CLK_FREQ),
+        .BAUD_RATE(BAUD_RATE)
+    ) u_uart_rx (
+        .clk(clk),
+        .rst_n(rst_n),
+        .rx_line(UART_RX),
+        .rx_data(rx_data_w),
+        .rx_done(rx_done_w)
+    );
+
+    // Khối truyền UART TX (Start khi RX nhan xong -> Echo Loopback)
+    uart_tx #(
+        .CLK_FREQ(CLK_FREQ),
+        .BAUD_RATE(BAUD_RATE)
+    ) u_uart_tx (
+        .clk(clk),
+        .rst_n(rst_n),
+        .tx_start(rx_done_w),
+        .tx_data(rx_data_w),
+        .tx_busy(tx_busy_w),
+        .tx_line(UART_TX)
+    );
+
+    // Cập nhật giá trị hiển thị LED
+    always @(posedge clk or negedge rst_n) begin
+        if (!rst_n) begin
+            led_reg <= 8'h00;
+        end else if (rx_done_w) begin
+            led_reg <= rx_data_w;
+        end
+    end
+
+    assign LEDR = led_reg;
+
+endmodule

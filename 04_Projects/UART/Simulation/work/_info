@@ -1,0 +1,50 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/intelFPGA/prj/UART/Simulation
+vtb_uart_tx
+Z1 !s110 1786198227
+!i10b 1
+!s100 SkX2@9Q:hZJJXZ>5A6T:e0
+I6ZoUR;FkZoOLdm:cXF:`02
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1786197816
+8tb_uart_tx.v
+Ftb_uart_tx.v
+L0 14
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+!s108 1786198227.000000
+!s107 tb_uart_tx.v|
+!s90 -reportprogress|300|tb_uart_tx.v|
+!i113 1
+Z4 tCvgOpt 0
+vuart_tx
+R1
+!i10b 1
+!s100 FFA8ozG]NLD2ILlZY0F=91
+IeN2amSQe84ia`4e;N3_DB3
+R2
+R0
+w1786167306
+8../RTL/uart_tx.v
+F../RTL/uart_tx.v
+L0 10
+R3
+r1
+!s85 0
+31
+!s108 1786198226.000000
+!s107 ../RTL/uart_tx.v|
+!s90 -reportprogress|300|../RTL/uart_tx.v|
+!i113 1
+R4
