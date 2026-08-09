@@ -1,94 +1,90 @@
 m255
 K4
 z2
-!s12c _opt1
-Z0 !s99 nomlopt
-!s12c _opt
-R0
-!s11f vlog 2025.2 2025.05, May 31 2025
 13
 !s112 1.1
 !i10d 8192
 !i10e 25
 !i10f 100
 cModel Technology
-Z1 dC:/ThucTap/DE10-Standard_FPGA_EKB/04_Projects/VGA/Simulation
-T_opt
-!i145 1
-!i144 0
-!s110 1785563389
-VL]IH23jlKT`fLY0jOd<]n2
-Z2 04 13 4 work tb_vga_timing fast 0
-=1-000c2956db5d-6a6d88fa-285-2af8
+Z0 dc:/intelFPGA/prj/VGA/simulation
+vcolor_bar_pattern
+!s110 1786280102
+!i10b 1
+!s100 Pz?9PAMCa8^nDeN8bcAWg0
+IZCahOWk2QNd`0N98l>jIQ1
+Z1 VDg1SIo80bB@j0V0VzS_@n1
 R0
-Z3 !s12f OEM100
-Z4 !s12b OEM100
-Z5 !s124 OEM10U2 
-Z6 !s135 nogc
-o-quiet -auto_acc_if_foreign -work work
-Z7 tCvgOpt 0 defaultOptions 1107585188
-n@_opt
-Z8 OL;O;2025.2;82
+w1786278293
+8../RTL/color_bar_pattern.v
+F../RTL/color_bar_pattern.v
+L0 8
+Z2 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z3 !s108 1786280102.000000
+Z4 !s107 ../RTL/vga_timing.v|../RTL/fpga_vga.v|../RTL/color_bar_pattern.v|
+Z5 !s90 -reportprogress|300|../RTL/color_bar_pattern.v|../RTL/fpga_vga.v|../RTL/vga_timing.v|
+!i113 1
+Z6 tCvgOpt 0
+vfpga_vga
+Z7 !s110 1786280103
+!i10b 1
+!s100 QB7S6bQ7PGe[OW:]CeUcz1
+IAELd=M>dgo:`l=U;PWk=03
 R1
-T_opt1
-!i145 1
-!i144 0
-!s110 1785563475
-V0G:CHk8@SOG`ZzbJzmK_>0
-R2
-=1-000c2956db5d-6a6d8951-3d1-2490
 R0
+w1786277234
+8../RTL/fpga_vga.v
+F../RTL/fpga_vga.v
+L0 10
+R2
+r1
+!s85 0
+31
 R3
 R4
 R5
+!i113 1
 R6
-o-quiet -auto_acc_if_foreign -work work +acc
-R7
-n@_opt1
-R8
 vtb_vga_timing
-2C:/ThucTap/DE10-Standard_FPGA_EKB/04_Projects/VGA/Simulation/tb_vga_timing.v
-!s110 1785563302
+R7
 !i10b 1
-!s100 7H0k]=V=Kj8h36k7a`n]B0
-I_c:EmLV[QnRU^K2?Q_3[j3
+!s100 ST<i;Rm]hYGmV5=AVfB<G2
+IC>?Z?NWGmKR<^UZf5iYNN1
 R1
-w1785562148
-8C:/ThucTap/DE10-Standard_FPGA_EKB/04_Projects/VGA/Simulation/tb_vga_timing.v
-FC:/ThucTap/DE10-Standard_FPGA_EKB/04_Projects/VGA/Simulation/tb_vga_timing.v
-!i122 1
-L0 2 29
-Z9 VDg1SIo80bB@j0V0VzS_@n1
-Z10 OL;L;2025.2;82
+R0
+w1786278349
+8tb_vga_timing.v
+Ftb_vga_timing.v
+L0 9
+R2
 r1
 !s85 0
 31
-!s108 1785563302.000000
-!s107 C:/ThucTap/DE10-Standard_FPGA_EKB/04_Projects/VGA/Simulation/tb_vga_timing.v|
-!s90 -reportprogress|300|-work|work|C:/ThucTap/DE10-Standard_FPGA_EKB/04_Projects/VGA/Simulation/tb_vga_timing.v|
-!i113 0
-Z11 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
-Z12 tCvgOpt 0 defaultOptions 1085333592
+!s108 1786280103.000000
+!s107 tb_vga_timing.v|
+!s90 -reportprogress|300|tb_vga_timing.v|
+!i113 1
+R6
 vvga_timing
-2C:/ThucTap/DE10-Standard_FPGA_EKB/04_Projects/VGA/RTL/vga_timing.v
-!s110 1785563374
+R7
 !i10b 1
-!s100 4<W=5ibU_mLPiQz0Ci13?3
-Iag2HU>oZXI9>=<^FhOf>@2
+!s100 [JTj^Q23QAT:`LOlOI;C>0
+IIm=SS>GP`]26[:;C;:R8P0
 R1
-w1785560021
-8C:/ThucTap/DE10-Standard_FPGA_EKB/04_Projects/VGA/RTL/vga_timing.v
-FC:/ThucTap/DE10-Standard_FPGA_EKB/04_Projects/VGA/RTL/vga_timing.v
-!i122 4
-L0 1 45
-R9
-R10
+R0
+w1786278277
+8../RTL/vga_timing.v
+F../RTL/vga_timing.v
+L0 8
+R2
 r1
 !s85 0
 31
-!s108 1785563374.000000
-!s107 C:/ThucTap/DE10-Standard_FPGA_EKB/04_Projects/VGA/RTL/vga_timing.v|
-!s90 -reportprogress|300|-work|work|C:/ThucTap/DE10-Standard_FPGA_EKB/04_Projects/VGA/RTL/vga_timing.v|
-!i113 0
-R11
-R12
+R3
+R4
+R5
+!i113 1
+R6

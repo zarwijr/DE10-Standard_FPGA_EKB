@@ -210,8 +210,8 @@ wire         fpga_clk_50;
 
 assign stm_hw_events = {{4{1'b0}}, SW, fpga_led_internal[8:0], fpga_debounced_buttons};
 assign fpga_clk_50   = CLOCK_50;
-assign VGA_BLANK_N   = 1'b1;
-assign VGA_SYNC_N    = 1'b0;
+assign VGA_BLANK_N   = vid_datavalid;
+assign VGA_SYNC_N    = 1'b1;
 assign VGA_CLK       = clk_65;
 assign {VGA_B, VGA_G, VGA_R} = {vid_b, vid_g, vid_r};
 assign VGA_VS        = vid_v_sync;

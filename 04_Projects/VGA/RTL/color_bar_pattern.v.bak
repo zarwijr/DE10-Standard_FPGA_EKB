@@ -1,36 +1,36 @@
+// ============================================================================
+// File Name   : color_bar_pattern.v
+// Module Name : color_bar_pattern
+// Description : Generates 8 vertical color bars for testing
+//               Each bar = 80 pixels (640 / 8)
+// ============================================================================
+
 module color_bar_pattern (
-    input  wire [9:0] pixel_x,
-    input  wire [9:0] pixel_y,
-    input  wire       video_on,
-    output reg  [7:0] vga_r,
-    output reg  [7:0] vga_g,
-    output reg  [7:0] vga_b
+    input  wire [9:0]  pixel_x,      // X coordinate (0..639 active)
+    input  wire [9:0]  pixel_y,      // Y coordinate (0..479 active)
+    input  wire        video_on,     // Active during display area
+    output reg  [7:0]  vga_r,        // Red channel (8-bit)
+    output reg  [7:0]  vga_g,        // Green channel (8-bit)
+    output reg  [7:0]  vga_b         // Blue channel (8-bit)
 );
 
     always @(*) begin
         if (!video_on) begin
-            vga_r = 8'h00; vga_g = 8'h00; vga_b = 8'h00;
+            vga_r = 8'h00;
+            vga_g = 8'h00;
+            vga_b = 8'h00;
         end else begin
-            // Chia 640 pixel thành 8 cột, mỗi cột 80 pixel
-            case (pixel_x[9:7]) // pixel_x / 128 (hoặc dùng đoạn if-else chia 80)
-                // White
-                3'd0: begin vga_r = 8'hFF; vga_g = 8'hFF; vga_b = 8'hFF; end
-                // Yellow
-                3'd1: begin vga_r = 8'hFF; vga_g = 8'hFF; vga_b = 8'h00; end
-                // Cyan
-                3'd2: begin vga_r = 8'h00; vga_g = 8'hFF; vga_b = 8'hFF; end
-                // Green
-                3'd3: begin vga_r = 8'h00; vga_g = 8'hFF; vga_b = 8'h00; end
-                // Magenta
-                3'd4: begin vga_r = 8'hFF; vga_g = 8'h00; vga_b = 8'hFF; end
-                // Red
-                3'd5: begin vga_r = 8'hFF; vga_g = 8'h00; vga_b = 8'h00; end
-                // Blue
-                3'd6: begin vga_r = 8'h00; vga_g = 8'h00; vga_b = 8'hFF; end
-                // Black
-                3'd7: begin vga_r = 8'h00; vga_g = 8'h00; vga_b = 8'h00; end
-                default: begin vga_r = 8'h00; vga_g = 8'h00; vga_b = 8'h00; end
-            endcase
-        end
-    end
-endmodule
+            // Divide 640-pixel width into 8 bars of 80 pixels each
+            if (pixel_x < 80)
+                {vga_r, vga_g, vga_b} = {8'hFF, 8'hFF, 8'hFF};  // White
+            else if (pixel_x < 160)
+                {vga_r, vga_g, vga_b} = {8'hFF, 8'hFF, 8'h00};  // Yellow
+            else if (pixel_x < 240)
+                {vga_r, vga_g, vga_b} = {8'h00, 8'hFF, 8'hFF};  // Cyan
+            else if (pixel_x < 320)
+                {vga_r, vga_g, vga_b} = {8'h00, 8'hFF, 8'h00};  // Green
+            else if (pixel_x < 400)
+                {vga_r, vga_g, vga_b} = {8'hFF, 8'h00, 8'hFF};  // Magenta
+            else if (pixel_x < 480)
+                {vga_r, vga_g, vga_b} = {8'hFF, 8'h00, 8'h00};  // Red
+            else if (pixel_x < 560)
