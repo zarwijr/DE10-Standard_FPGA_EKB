@@ -1,0 +1,6 @@
+DATE = "11:06:19 August 10, 2026"
+QUARTUS_VERSION = "16.0.2"
+
+# Revisions
+
+PROJECT_REVISION = "spi"

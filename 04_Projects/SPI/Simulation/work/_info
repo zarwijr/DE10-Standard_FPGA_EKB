@@ -1,0 +1,130 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dc:/intelFPGA/prj/SPI/Simulation
+vhex_decoder
+Z1 !s110 1786355553
+!i10b 1
+!s100 Hj1leYHBga:fXMV2RA@H22
+I1?5HCYFLiR[WmD5B6P[jc2
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z3 w1786352007
+Z4 8../RTL/spi.v
+Z5 F../RTL/spi.v
+L0 158
+Z6 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z7 !s108 1786355552.000000
+Z8 !s107 ../RTL/spi.v|
+Z9 !s90 -reportprogress|300|../RTL/spi.v|
+!i113 1
+Z10 tCvgOpt 0
+vspi
+R1
+!i10b 1
+!s100 P2n9d7f2Y^zLoNY`i^;5b1
+IPZ>GX?O3GfD0Ha4]_DRBP2
+R2
+R0
+R3
+R4
+R5
+L0 9
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+vspi_bist
+Z11 !s110 1786355552
+!i10b 1
+!s100 435oHb0H<ZWR8HPB03XU93
+I8XlmChaWBd:UKBIPP>:Z_1
+R2
+R0
+w1786351946
+8../RTL/spi_bist.v
+F../RTL/spi_bist.v
+L0 9
+R6
+r1
+!s85 0
+31
+R7
+!s107 ../RTL/spi_bist.v|
+!s90 -reportprogress|300|../RTL/spi_bist.v|
+!i113 1
+R10
+vspi_master
+R11
+!i10b 1
+!s100 QR0kH>^`SkB=oKb6dAmE]2
+Ia2:eH9MATb@zf=T=gYzf:1
+R2
+R0
+w1786351739
+8../RTL/spi_master.v
+F../RTL/spi_master.v
+Z12 L0 12
+R6
+r1
+!s85 0
+31
+R7
+!s107 ../RTL/spi_master.v|
+!s90 -reportprogress|300|../RTL/spi_master.v|
+!i113 1
+R10
+vspi_slave
+R11
+!i10b 1
+!s100 ESR6<fHiJOPL8l1jM<AbP3
+IWW=<WSVhUk45HFTJ^d7eC3
+R2
+R0
+w1786351768
+8../RTL/spi_slave.v
+F../RTL/spi_slave.v
+R12
+R6
+r1
+!s85 0
+31
+R7
+!s107 ../RTL/spi_slave.v|
+!s90 -reportprogress|300|../RTL/spi_slave.v|
+!i113 1
+R10
+vtb_spi_loopback
+R1
+!i10b 1
+!s100 SH6i^X=i@]jS06ojgPJ=B2
+IHEVBl?<1WFJcF4[[YiUI63
+R2
+R0
+w1786355485
+8tb_spi_loopback.v
+Ftb_spi_loopback.v
+L0 3
+R6
+r1
+!s85 0
+31
+!s108 1786355553.000000
+!s107 tb_spi_loopback.v|
+!s90 -reportprogress|300|tb_spi_loopback.v|
+!i113 1
+R10
